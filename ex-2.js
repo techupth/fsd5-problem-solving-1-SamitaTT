@@ -1,7 +1,12 @@
 //Exercise 2: Valid Palindrome
 
 const isPalindrome = function (s) {
-  //Start Coding here
+  let StrLowerCase = s.toLowerCase();
+  let removeSpace = StrLowerCase.replaceAll(" ", "")
+    .replaceAll(",", "")
+    .replaceAll(":", "");
+  let reverseStr = removeSpace.split("").reverse().join("");
+  return removeSpace === reverseStr;
 };
 
 const result1 = isPalindrome("A man, a plan, a canal: Panama");
